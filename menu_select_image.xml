@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="@string/item_LeBron_Jame"
+        android:id="@+id/item_LeBron_James"></item>
+    <item
+        android:title="@string/item_Giannis_Antetokounmpo"
+        android:id="@+id/item_Giannis_Antetokounmpo"></item>
+    <item
+        android:title="@string/item_Jayson_Tatum"
+        android:id="@+id/item_Jayson_Tatum"></item>
+    <item
+        android:title="@string/item_Ben_Simmons"
+        android:id="@+id/item_Ben_Simmons"></item>
+    <item
+        android:title="@string/item_Devin_Booker"
+        android:id="@+id/item_Devin_Booker"></item>
+</menu>

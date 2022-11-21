@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="@string/itemChangeImage"
+        android:id="@+id/itemChangeImage"></item>
+    <item
+        android:title="@string/itemChangeBackgroundColor"
+        android:id="@+id/itemChangeBackgroundColor">
+        <menu>
+            <item
+                android:title="@string/itemPink"
+                android:id="@+id/itemPink"></item>
+            <item
+                android:title="@string/itemLightGreen"
+                android:id="@+id/itemLightGreen"></item>
+            <item
+                android:title="@string/itemSkyBlue"
+                android:id="@+id/itemSkyBlue"></item>
+        </menu>
+    </item>
+
+
+
+</menu>

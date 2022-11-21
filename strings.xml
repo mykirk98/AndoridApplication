@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Project_final_term</string>
+    <string name="iconLayout"></string>
+    <string name="ibZoomin"></string>
+    <string name="ibZoomout"></string>
+    <string name="ibRotate"></string>
+    <string name="ibBright"></string>
+    <string name="ibDark"></string>
+    <string name="ibGray"></string>
+    <string name="pictureLayout"></string>
+    <string name="itemChangeImage">change image</string>
+    <string name="itemChangeBackgroundColor">change background color</string>
+    <string name="itemPink">PINK</string>
+    <string name="itemLightGreen">LIGHT GREEN</string>
+    <string name="itemSkyBlue">SKY BLUE</string>
+    <string name="baseLayout"></string>
+    <string name="btnSelectImage">Select Image</string>
+    <string name="item_LeBron_Jame">LeBron James</string>
+    <string name="item_Jayson_Tatum">Jayson Tatum</string>
+    <string name="item_Giannis_Antetokounmpo">Giannis AntetoKounmpo</string>
+    <string name="item_Devin_Booker">Devin Booker</string>
+    <string name="item_Ben_Simmons">Ben Simmons</string>
+
+</resources>
