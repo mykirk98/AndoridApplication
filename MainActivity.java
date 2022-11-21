@@ -1,5 +1,6 @@
 package com.example.project_final_term;
 
+import android.app.TabActivity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -16,10 +17,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.TabHost;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
-public class MainActivity extends AppCompatActivity {
+@SuppressWarnings("deprecation")
+public class MainActivity extends TabActivity {
 
     static float scaleX = 1, scaleY = 1;
     static float angle = 0;
@@ -38,6 +41,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setTitle("FINAL TERM project");
 
+//////////////////// TAB HOST ////////////////////   HEAD
+        TabHost tabHost = getTabHost();
+
+        TabHost.TabSpec tabSpecMiniPhotoshop = tabHost.newTabSpec("Pshop").setIndicator("Photo Shop");
+        tabSpecMiniPhotoshop.setContent(R.id.tabMiniPhotoshop);
+        tabHost.addTab(tabSpecMiniPhotoshop);
+
+        TabHost.TabSpec tabSpecImageViewer = tabHost.newTabSpec("Viewer").setIndicator("Image Viewer");
+        tabSpecImageViewer.setContent(R.id.tabImageViewer);
+        tabHost.addTab(tabSpecImageViewer);
+
+        tabHost.setCurrentTab(0);
+//////////////////// TAB HOST ////////////////////   TAIL
+
+//////////////////// MINI PHOTOSHOP ////////////////////   HEAD
         baseLayout$ = (LinearLayout) findViewById(R.id.baseLayout);
         LinearLayout pictureLayout$ = (LinearLayout) findViewById(R.id.pictureLayout);
         graphicView$ = (MyGraphicView) new MyGraphicView(this);
@@ -53,8 +71,11 @@ public class MainActivity extends AppCompatActivity {
         clickIcon_Bright();
         clickIcon_Dark();
         clickIcon_Gray();
+//////////////////// MINI PHOTOSHOP ////////////////////   TAIL
     }
 
+
+//////////////////// OPTION MENU ////////////////////
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
@@ -78,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         }
         return false;
     }
-
+//////////////////// CONTEXT MENU ////////////////////
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
@@ -90,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+//////////////////// MINI PHOTOSHOP IMAGE BUTTON ////////////////////   HEAD
     private void clickIcon_ZoomIn() {
         imageButton_ZoomIn = (ImageButton) findViewById(R.id.ibZoomin);
         imageButton_ZoomIn.setOnClickListener(new View.OnClickListener() {
@@ -162,6 +184,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+//////////////////// MINI PHOTOSHOP IMAGE BUTTON ////////////////////   TAIL
 
     private static class MyGraphicView extends View {
         public MyGraphicView(Context context) {
